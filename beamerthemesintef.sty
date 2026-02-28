@@ -70,8 +70,8 @@
 }
 \footlinecolor{} % Default: no footline
 
-\pgfdeclareimage[width=0.09\paperwidth]{logo}{ustc_logo_blackbg_white}
-\pgfdeclareimage[width=0.09\paperwidth]{whitelogo}{ustc_logo_blackbg_white}
+\pgfdeclareimage[width=0.09\paperwidth]{logo}{assets/ustc_logo_blackbg_white}
+\pgfdeclareimage[width=0.09\paperwidth]{whitelogo}{assets/ustc_logo_blackbg_white}
 \newcommand{\@logo}{logo}
 
 % Set colours
@@ -97,7 +97,7 @@
 }
 \themecolor{white} % Default: white theme
 
-\setbeamercolor{title}{fg=maincolor,bg=white}
+\setbeamercolor{title}{fg=maincolor,bg=}
 \setbeamercolor{alerted text}{fg=black}
 \setbeamercolor{author}{fg=black}
 \setbeamercolor{date}{fg=black}
@@ -134,7 +134,7 @@
 
 % Define frame title and subtitle layout
 \setbeamertemplate{frametitle}{%
-  \vspace*{-3.5ex}
+  \vspace*{-4.4ex}
   \begin{beamercolorbox}[leftskip=2cm]{frametitle}%
     \usebeamerfont{frametitle}\insertframetitle\\
     \usebeamerfont{framesubtitle}\insertframesubtitle
@@ -169,7 +169,7 @@
 
 % Define slide splitting dimensions (e.g. title and chapter slides)
 \newcommand{\TikzSplitSlide}[1]{%
-  \rule{0.56\paperwidth}{0pt}%
+  \rule{0.4\paperwidth}{0pt}%
   \begin{tikzpicture}
     \clip (-0.1\paperwidth,-0.5\paperheight) -- 
           ( 0.5\paperwidth,-0.5\paperheight) -- 
@@ -253,7 +253,7 @@
   \includegraphics[height=\paperheight]{#1}%
   }
   \setbeamertemplate{frametitle}{% Same as normal, but with right skip
-    \vspace*{-3.5ex}
+    \vspace*{-4.4ex}
     \begin{beamercolorbox}[leftskip=2cm,rightskip=0.4\textwidth]{frametitle}%
       \usebeamerfont{frametitle}\insertframetitle\\
       \usebeamerfont{framesubtitle}\insertframesubtitle

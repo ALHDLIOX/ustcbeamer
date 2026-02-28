@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{graphicx}
+\begin{document}
+\begin{tikzpicture}
+    \fill[black] (0,0) rectangle (16,9);
+    % Since the beamer theme clips to the right side and centers the image,
+    % we place the logo where it will be visible in the bottom right of the split.
+    % The visible part is roughly from x=6.4 to x=16 in the final slide coordinates,
+    % but the background image is centered on the split.
+    % In \TikzSplitSlide, the node is at (0.2\paperwidth, 0) and clip goes to 0.5\paperwidth.
+    % Total paper width is 16cm. 0.2*16 = 3.2cm. 0.5*16 = 8cm.
+    % So from the center of the image, we see 8 - 3.2 = 4.8cm to the right.
+    % Center of 16cm image is 8cm. 8 + 4.8 = 12.8cm.
+    % So x=12.8cm in a 16cm image is the right edge of the slide!
+    \node[anchor=south east] at (12.5, 0.5) {
+        \includegraphics[width=8cm]{ustc_logo_stack_inv.pdf}
+    };
+\end{tikzpicture}
+\end{document}

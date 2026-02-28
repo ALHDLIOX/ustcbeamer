@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{graphicx}
+\begin{document}
+\begin{tikzpicture}
+    \fill[white] (0,0) rectangle (16,9);
+    % Same layout as black_bg_with_logo.tex but with inverted colors:
+    % White background + normal (dark) logo
+    \node[anchor=south east] at (12.5, 0.5) {
+        \includegraphics[width=8cm]{ustc_logo_stack.pdf}
+    };
+\end{tikzpicture}
+\end{document}
